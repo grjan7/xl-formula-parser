@@ -1,0 +1,17 @@
+{
+  "name": "excel-formula-like-parser",
+  "version": "1.0.0",
+  "description": "Parses the Excel-formula-like string into JavaScript Tree Object.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node test.spec.js"
+  },
+  "keywords": [
+    "Excel-formula-like",
+    "Object",
+    "tree",
+    "parser"
+  ],
+  "author": "Jana Rangasamy <janagr7@gmail.com>",
+  "license": "ISC"
+}
