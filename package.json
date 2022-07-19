@@ -4,7 +4,6 @@
   "description": "Parses the Excel-formula-like string into JavaScript Tree Object.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.test.js",
     "test": "jest"
   },
   "keywords": [
