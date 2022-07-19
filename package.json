@@ -4,7 +4,8 @@
   "description": "Parses the Excel-formula-like string into JavaScript Tree Object.",
   "main": "index.js",
   "scripts": {
-    "start": "node test.spec.js"
+    "start": "node index.test.js",
+    "test": "jest"
   },
   "keywords": [
     "Excel-formula-like",
@@ -13,5 +14,8 @@
     "parser"
   ],
   "author": "Jana Rangasamy <janagr7@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
 }
