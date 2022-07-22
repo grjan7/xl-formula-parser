@@ -5,7 +5,7 @@ Parses excel-formula-like string to JSON object tree and reverse parses to formu
 
 ```JS
 
-  const parse = require("./index").parse;
+  const {parse} = require("./index");
   const formula = `=OR(EQ(./path/personName, "John Doe"), NOT(EQ(personName, "John Smith")))`;
   const parsedFormula = parse(formula);
 
@@ -53,7 +53,7 @@ Parses excel-formula-like string to JSON object tree and reverse parses to formu
 
 ```JS
 
-const stringify = require('./index').stringify;
+const {stringify} = require('./index');
 const formulaTreeObject = {
   formula: "EQ",
   args: [{path: "./path/personName"}, "John Doe"]
