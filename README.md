@@ -1,19 +1,35 @@
-# Excel-Formula-Like-String-Parser
-Parses excel-formula-like string to JSON object tree and reverse parses to formula string
+# excel-formula-like-string-parser
 
-## Parse Example
+## Description
 
-```JS
+Parses excel-formula-like string to JSON object tree and reverse parses to formula string.
 
-  const {parse} = require("./index");
-  const formula = `=OR(EQ(./path/personName, "John Doe"), NOT(EQ(personName, "John Smith")))`;
-  const parsedFormula = parse(formula);
+## Installation
 
+```sh
+  npm i excel-formula-like-string-parser
 ```
 
-### parse(formula):
+## APIs
 
-```JS
+### parse(str)
+
+- **str** | datatype: string | required 
+
+#### Example
+
+```js
+
+  const { parse } = require("excel-formula-like-string-parser");
+
+  const formula = `=OR(EQ(./path/personName, "John Doe"), NOT(EQ(personName, "John Smith")))`;
+
+  parse(formula); 
+
+```
+`parse(formula)` returns
+
+```js
 
   {
     formula: "OR",
@@ -49,25 +65,53 @@ Parses excel-formula-like string to JSON object tree and reverse parses to formu
 ------
 
 
-## stringify Example
+### stringify(obj)
 
-```JS
+- **obj** | datatype: object | required
 
-const {stringify} = require('./index');
+
+#### Example
+```js
+
+const { stringify } = require('excel-formula-like-string-parser');
+
 const formulaTreeObject = {
-  formula: "EQ",
-  args: [{path: "./path/personName"}, "John Doe"]
-};
+    formula: "OR",
+    args: [
+      {
+        formula: "EQ", 
+        args: [
+          {
+            path: "./path/personName"
+          },
+          "John Doe"
+        ]
+      },
+      {
+        formula: "NOT",
+        args: [
+          {
+            formula: "EQ",
+            args:[
+              {
+                variable: "personName"
+              },
+            "John Smith"
+            ]
+          }
+        ]
+      }
+    ]
+  };
 
 stringify(formulaTreeObject);
 
 ```
+`stringify(formulaTreeObject)` returns
 
-### stringify(formulaTreeObject)
+```js
 
-```JS
-
-  '=EQ(./path/personName, "John Doe")'
+  '=OR(EQ(./path/personName, "John Doe"), NOT(EQ(personName, "John Smith")))'
 
 ```
 
