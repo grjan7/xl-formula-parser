@@ -1,4 +1,4 @@
-# excel-formula-like-string-parser
+# xl-formula-parser
 
 ## Description
 
@@ -7,7 +7,7 @@ Parses excel-formula-like string to JSON object tree and reverse parses to formu
 ## Installation
 
 ```sh
-  npm i excel-formula-like-string-parser
+  npm i xl-formula-parser
 ```
 
 ## APIs
@@ -20,7 +20,7 @@ Parses excel-formula-like string to JSON object tree and reverse parses to formu
 
 ```js
 
-  const { parse } = require("excel-formula-like-string-parser");
+  const { parse } = require("xl-formula-parser");
 
   const formula = `=OR(EQ(./path/personName, "John Doe"), NOT(EQ(personName, "John Smith")))`;
 
@@ -73,7 +73,7 @@ Parses excel-formula-like string to JSON object tree and reverse parses to formu
 #### Example
 ```js
 
-const { stringify } = require('excel-formula-like-string-parser');
+const { stringify } = require('xl-formula-parser');
 
 const formulaTreeObject = {
     formula: "OR",
