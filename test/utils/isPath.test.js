@@ -1,4 +1,4 @@
-const { isPath } = require("../../lib/utils");
+const { isPath } = require("../../lib/util/utils");
 
 describe("Test Suite for isPath(arg)", () => {
   describe("valid paths", () => {

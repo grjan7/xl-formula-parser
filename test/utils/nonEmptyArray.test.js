@@ -1,4 +1,4 @@
-const { nonEmptyArray } = require("../../lib/utils");
+const { nonEmptyArray } = require("../../lib/util/utils");
 
 describe("nonEmptyArray Tests", () => {
 

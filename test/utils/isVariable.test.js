@@ -1,4 +1,4 @@
-const { isVariable } = require("../../lib/utils");
+const { isVariable } = require("../../lib/util/utils");
 
 describe("isVariable Tests", () => {
 

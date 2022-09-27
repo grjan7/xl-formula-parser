@@ -1,4 +1,4 @@
-const { hasArray } = require("../../lib/utils");
+const { hasArray } = require("../../lib/util/utils");
 
 describe("hasArray Tests", () => {
 

@@ -1,4 +1,4 @@
-const { isAnObject } = require("../../lib/utils");
+const { isAnObject } = require("../../lib/util/utils");
 
 describe("Test Suite for isAnObject(arg)", () => {
 
